@@ -11,10 +11,4 @@ public class DollarTest {
         assertThat(five.times(2)).isEqualTo(new Dollar(10));
         assertThat(five.times(3)).isEqualTo(new Dollar(15));
     }
-
-    @Test
-    void testEquality() {
-        assertThat(new Dollar(5)).isEqualTo(new Dollar(5));
-        assertThat(new Dollar(5)).isNotEqualTo(new Dollar(6));
-    }
 }
