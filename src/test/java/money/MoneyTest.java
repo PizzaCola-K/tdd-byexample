@@ -66,4 +66,9 @@ class MoneyTest {
         assertThat(Money.dollar(1).currency()).isEqualTo("USD");
         assertThat(Money.franc(1).currency()).isEqualTo("CHF");
     }
+
+    @Test
+    void testIdentityRate() {
+        assertThat(new Bank().rate("USD", "USD")).isEqualTo(1);
+    }
 }
