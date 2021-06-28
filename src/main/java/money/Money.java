@@ -1,10 +1,10 @@
 package money;
 
 public class Money implements Expression{
-    private final int amount;
-    private final String currency;
+    int amount;
+    String currency;
 
-    private Money(int amount, String currency) {
+    Money(int amount, String currency) {
         this.amount = amount;
         this.currency = currency;
     }
