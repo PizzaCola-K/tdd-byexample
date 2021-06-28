@@ -32,6 +32,14 @@ class MoneyTest {
     }
 
     @Test
+    void testReduceSum() {
+        Expression sum = new Sum(Money.dollar(3), Money.dollar(4));
+        Bank bank = new Bank();
+        Money result = bank.reduce(sum, "USD");
+        assertThat(result).isEqualTo(Money.dollar(7));
+    }
+
+    @Test
     void testEquality() {
         assertThat(Money.dollar(5)).isEqualTo(Money.dollar(5));
         assertThat(Money.dollar(5)).isNotEqualTo(Money.dollar(6));
