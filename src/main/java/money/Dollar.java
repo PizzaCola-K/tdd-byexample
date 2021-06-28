@@ -1,7 +1,7 @@
 package money;
 
 public class Dollar {
-    int amount;
+    private int amount;
 
     public Dollar(int amount) {
         this.amount = amount;
@@ -13,6 +13,7 @@ public class Dollar {
 
     @Override
     public boolean equals(Object object) {
-        return true;
+        Dollar dollar = (Dollar) object;
+        return amount == dollar.amount;
     }
 }
