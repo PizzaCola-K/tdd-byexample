@@ -6,11 +6,11 @@ class WasRun(TestCase):
     def __init__(self, name) -> None:
         TestCase.__init__(self, name)
 
+    def setUp(self):
+        self.log = 'setUp '
+
     def testMethod(self) -> None:
-        self.wasRun = 1
         self.log = self.log + 'testMethod '
 
-    def setUp(self):
-        self.wasRun = None
-        self.wasSetUp = 1
-        self.log = 'setUp '
+    def tearDown(self):
+        self.log = self.log + 'tearDown '

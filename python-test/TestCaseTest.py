@@ -3,9 +3,6 @@ from TestCase import TestCase
 
 
 class TestCaseTest(TestCase):
-
-    def setUp(self):
-        pass
  
     def testTemplateMethod(self):
         test = WasRun('testMethod')
