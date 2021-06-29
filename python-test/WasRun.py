@@ -1,15 +1,11 @@
+from TestCase import TestCase
 from this import d
 
 
-class WasRun:
+class WasRun(TestCase):
     def __init__(self, name) -> None:
         self.wasRun = None
-        self.name = name
-
-    def run(self) -> None:
-        method = getattr(self, self.name)
-        method()
+        TestCase.__init__(self, name)
 
     def testMethod(self) -> None:
         self.wasRun = 1
-        
