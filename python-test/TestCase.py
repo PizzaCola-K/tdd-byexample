@@ -3,5 +3,6 @@ class TestCase:
         self.name = name
     
     def run(self) -> None:
+        self.setUp()
         method = getattr(self, self.name)
         method()
