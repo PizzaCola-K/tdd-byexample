@@ -1,9 +1,8 @@
-import WasRun
-import TestCase
+from WasRun import WasRun
+from TestCase import TestCase
 
 
 class TestCaseTest(TestCase):
- 
     def testTemplateMethod(self):
         test = WasRun('testMethod')
         test.run()
