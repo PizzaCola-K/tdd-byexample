@@ -1,5 +1,4 @@
 from TestCase import TestCase
-from this import d
 
 
 class WasRun(TestCase):
