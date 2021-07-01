@@ -1,6 +1,6 @@
-from unittest import TestResult
 from WasRun import WasRun
 from TestCase import TestCase
+from TestResult import TestResult
 
 
 class TestCaseTest(TestCase):
@@ -24,6 +24,14 @@ class TestCaseTest(TestCase):
         result.testStarted()
         result.testFailed()
         assert('1 run, 1 failed' == result.summary())
+    
+    def testSuite(self):
+        suite = TestSuite()
+        suite.add(WasRun('testMethod'))
+        suite.add(WasRun('testBrokenMethod'))
+        result = suite.run()
+        assert('2 run, 1 failed' == result.summary())
+        
 
 TestCaseTest('testTemplateMethod').run()
 TestCaseTest('testResult').run()
